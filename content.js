@@ -1,7 +1,14 @@
-document.querySelector('.TitleImage').remove()
-document.querySelectorAll('a.external')
+const titleImage = document.querySelector('.TitleImage')
+
+if (titleImage) {
+  titleImage.remove()
+}
+
+document.querySelectorAll('a.external, a.LinkCard')
   .forEach(link => {
     const href = link.getAttribute('href')
 
-    link.setAttribute('href', decodeURIComponent(href.split('target=')[1]))
+    if (href.startsWith('https://link.zhihu.com/?target=')) {
+      link.setAttribute('href', decodeURIComponent(href.split('target=')[1]))
+    }
   })

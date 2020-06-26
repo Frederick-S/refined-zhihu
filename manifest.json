@@ -9,7 +9,7 @@
         "content.js"
       ],
       "matches": [
-        "https://zhuanlan.zhihu.com/p/*"
+        "https://*.zhihu.com/*"
       ],
       "run_at": "document_end"
     }
