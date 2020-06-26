@@ -1,7 +1,7 @@
 {
   "name": "Refined Zhihu",
   "version": "1.0",
-  "description": "Remove useless images under zhuanlan.zhihu.com.",
+  "description": "A Chrome extension that simplifies Zhihu interface.",
   "manifest_version": 2,
   "content_scripts": [
     {
