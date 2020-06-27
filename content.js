@@ -1,14 +1,24 @@
-const titleImage = document.querySelector('.TitleImage')
+const css = `
+  .TitleImage {
+    display: none;
+  }
+`
+const style = document.createElement('style')
+style.type = 'text/css'
+style.appendChild(document.createTextNode(css))
 
-if (titleImage) {
-  titleImage.remove()
-}
+document.head.appendChild(style)
 
-document.querySelectorAll('a.external, a.LinkCard')
-  .forEach(link => {
-    const href = link.getAttribute('href')
+document.addEventListener('click', (event) => {
+  const target = event.target
 
-    if (href.startsWith('https://link.zhihu.com/?target=')) {
-      link.setAttribute('href', decodeURIComponent(href.split('target=')[1]))
+  if (target && (target.tagName.toLowerCase() === 'a' || target.parentElement.tagName.toLowerCase() === 'a')) {
+    const href = target.getAttribute('href') || target.parentElement.getAttribute('href')
+
+    if (href && href.indexOf('link.zhihu.com/?target=') >= 0) {
+      event.preventDefault()
+
+      window.open(decodeURIComponent(href.split('target=')[1]), '_blank')
     }
-  })
+  }
+})
