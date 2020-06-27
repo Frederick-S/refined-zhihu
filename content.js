@@ -12,7 +12,7 @@ document.head.appendChild(style)
 document.addEventListener('click', (event) => {
   const target = event.target
 
-  if (target && (target.tagName.toLowerCase() === 'a' || target.parentElement.tagName.toLowerCase() === 'a')) {
+  if (target && isLink(target)) {
     const href = target.getAttribute('href') || target.parentElement.getAttribute('href')
 
     if (href && href.indexOf('link.zhihu.com/?target=') >= 0) {
@@ -22,3 +22,15 @@ document.addEventListener('click', (event) => {
     }
   }
 })
+
+function isLink(element) {
+  if (!element) {
+    return false
+  }
+
+  if (element.tagName.toLowerCase() === 'a') {
+    return true
+  }
+
+  return element.parentElement && element.parentElement.tagName.toLowerCase() === 'a'
+}
