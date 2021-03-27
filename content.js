@@ -1,5 +1,5 @@
 const css = `
-  .TitleImage {
+  .TitleImage, .ArticleItem-image {
     display: none;
   }
 `
@@ -9,6 +9,7 @@ style.appendChild(document.createTextNode(css))
 
 document.head.appendChild(style)
 
+// Open link without confirmation
 document.addEventListener('click', (event) => {
   const target = event.target
   const link = queryLinkElement(target)
