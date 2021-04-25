@@ -5,6 +5,7 @@ Highlights:
 * Remove title image of Zhuanlan
 * Jump to external link without confirmation
 * Remove TOC
+* Remove ads
 
 ## License
 [MIT](LICENSE)
