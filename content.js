@@ -1,5 +1,5 @@
 const css = `
-  .TitleImage, .ArticleItem-image, .RichContent-cover, .Catalog {
+  .TitleImage, .ArticleItem-image, .RichContent-cover, .Catalog, .Pc-feedAd-container {
     display: none;
   }
 `
