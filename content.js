@@ -1,5 +1,5 @@
 const css = `
-  .TitleImage, .ArticleItem-image, .RichContent-cover, .Catalog, .Pc-feedAd-container, .RichText-MCNLinkCardContainer, .RichText-ADLinkCardContainer, .ZVideoItem, .VideoAnswerPlayer, Card:has(.EduSectionItem) {
+  .TitleImage, .ArticleItem-image, .RichContent-cover, .Catalog, .Pc-feedAd-container, .RichText-MCNLinkCardContainer, .RichText-ADLinkCardContainer, .ZVideoItem, .VideoAnswerPlayer, .EduSectionItem, .EduSectionItem+div {
     display: none;
   }
 `
